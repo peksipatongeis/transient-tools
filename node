@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+VERSION="10.16"
+IMAGE="node:$VERSION"
+
+docker run --rm -it -v $PWD:/app -w /app $IMAGE  "$@"

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+VERSION="latest"
+IMAGE="composer:$VERSION"
+
+docker run --rm -it -v $PWD:/app -u $(id -u):$(id -g) $IMAGE "$@"
